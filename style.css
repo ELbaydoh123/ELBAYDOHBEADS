@@ -6,13 +6,17 @@
 .header{
  background-color: brown;
  border: 500px;
+ align-items: center;
+ display: flex;
+ position: relative;
 }
 img{
     width: 5rem;
     height: 5rem;
 }
-.log{
+.logo{
     border-radius: 15px;
+    height: 60px;
 }
 .main img{
     width: 100%;
@@ -22,22 +26,85 @@ img{
 nav ul{
     list-style-type: none;
     display: flex;
-    justify-content: center;
     gap: 4rem;
-    align-items: center;
     font-size: medium;
-}
-nav a{
-    text-decoration: none;
-    display: flex;
+    align-items: right;
+    justify-content: center;
 }
 .shop{
     color:white ;
+    text-decoration: none;
+    align-items: center;
+    justify-content: space-between;
 }
-.about{
-    color:white ;
+.right-content{
+    display: flex;
+    gap: 15px;
 }
-.benefit{
-    color:white ;
+.track{
+    flex: 0 0 200px;
+    background-color: burlywood;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    padding: 16px;
+    width: 200px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
 }
-
+.track:hover{
+    transform: translateY(-5px);
+}
+.track img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+.name{
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+.price{
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 15px;
+}.add-to-cart{
+    background-color: bisque;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.add-to-cart:hover{
+    background-color:  bisque;
+}
+.add-to-cart:active{
+    border:  bisque;
+    transform: translateY(2px);
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 660px;
+}
+.sec{
+    background-color: burlywood;
+}
+.foot{
+    background-color: brown;
+    text-align: center;
+    padding: 30PX;
+    margin: 20;
+}
+.cart-icon{
+    font-size: 30px;
+    color: #333;
+    cursor: pointer;
+}
