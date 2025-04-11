@@ -125,7 +125,12 @@ h2{
     font-size: xx-large;
     text-decoration: none;
 }
-.beads{
+.container .beads{
+    align-items: center;
     text-align: center;
+    justify-items: center;
 
 }
+a{
+    color: #E3CCAD;
+};

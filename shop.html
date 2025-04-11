@@ -1,41 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop Now</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop Now</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color:  #E5D3BB;
+    }
+    .product {
+      margin-bottom: 10px;
+    }
+    .total {
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    .form-section {
+      margin-top: 30px;
+    }
+    input[type="text"], textarea {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 8px;
+    }
+    button {
+      padding: 10px 15px;
+      background-color: brown;
+      color:#E5D3BB; ;
+      border: none;
+      cursor: pointer;
+    }
+    a {
+      text-decoration: none;
+      color:  brown;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-        <a href="index.html" style="text-decoration: none;">HOME</a>
-        <h2>My Cart</h2>
-        </nav>
-    </header>
+  <a href="index.html" aria-label="Go to Home Page">HOME</a>
 
-    <div class="cart">
-        <h2>shopping-cart</h2>
-        <ul id="items"></ul>
-        <p>total: # <span id="total">0</span></p>
+  <h2>Shop Now</h2>
 
-          <h3>customer detail</h3>
-          <form id="form">
-               <label for="name">Full Name:</label>
-               <input type="text" id="name" required><br>
+  <div id="product-list"></div>
 
-               <label for="phone">phone number:</label>
-               <input type="tel" id="phone"required><br>
+  <div class="total" id="total-price">Total: $0</div>
 
-               <label for="email">Email Address:</label>
-               <input type="email" id="email" required><br>
+  <div class="form-section">
+    <h3>Order Details</h3>
+    <input type="text" id="customer-name" placeholder="Your Name" required />
+    <textarea id="customer-address" placeholder="Your Address" rows="3" required></textarea>
+    <button onclick="sendOrder()">Send Order on WhatsApp</button>
+  </div>
 
-               <label for="Address">Address:</label>
-               <input type="address" id="address" required><br>
-            </form>
+  <script>
+    const products = [
+      { name: 'Necklace', price: 3000 },
+      { name: 'Bracelet', price: 1500 },
+      { name: 'Waistbead', price: 1200 }
+    ];
 
-            <button id="checkout-btn">chat on whatsapp</button>
-    </div>
-    <script src="cart.js"></script>
-</body>
-</html>
+    let selectedItems = [0, 1]; // Indices of picked goods (Necklace and Bracelet)
+
+    const productList = document.getElementById('product-list');
+    const totalPriceEl = document.getElementById('total-price');
+
+    // Display selected products and calculate total price
+    function displayProducts() {
+      let total = 0;
+      productList.innerHTML = '';
+
+      selectedItems.forEach(index => {
+        const product = products[index];
+        total += product.price;
+
+        const div = document.createElement('div');
+        div.className = 'product';
+        div.textContent = `${product.name} - $${product.price}`;
+        productList.appendChild(div);
+      });
+
+      totalPriceEl.textContent = `Total: $${total}`;
+    }
+
+    // Send order via WhatsApp
+    function sendOrder() {
+      const name = document.getElementById('customer-name').value.trim();
+      const address = document.getElementById('customer-address').value.trim();
+
+      if (!name || !address) {
+        alert("Please fill in both your name and address.");
+        return;
+      }
+
+      let message = `Hello, I would like to place an order:\n\n`;
+
+      selectedItems.forEach(index => {
+        const product = products[index];
+        message += `- ${product.name}: $${product.price}\n`;
+      });
+
+      const total = selectedItems.reduce((sum, i) => sum + products[i].price, 0);
+      message += `\nTotal: $${total}\n\nName: ${name}\nAddress: ${address}`;
+
+      const encodedMessage = encodeURIComponent(message);
+      const whatsappNumber = '9130686608'; // Replace with your actual WhatsApp number
+      const whatsappURL = `https://wa.me/${9130686608}?text=${encodedMessage}`;
+
+      try {
+        window.open(whatsappURL, '_https://wa.me/9130686608');
+      } catch (error) {
+        alert("Failed to open WhatsApp. Please try again.");
+      }
+    }
+
+    // Initialize the product list display
+    displayProducts();
+  </script>
+  
