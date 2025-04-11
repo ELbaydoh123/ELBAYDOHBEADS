@@ -42,26 +42,23 @@
 <body>
   <a href="index.html" aria-label="Go to Home Page">HOME</a>
 
-  <h2>Shop Now</h2>
-
-  <div id="product-list"></div>
-
-  <div class="total" id="total-price">Total: $0</div>
-
   <div class="form-section">
     <h3>Order Details</h3>
     <input type="text" id="customer-name" placeholder="Your Name" required />
+    <select name="required" id="product needed">
+      <option value="">Select Product</option>
+      <option value="1">1(waistbeads,necklace,customizedeyeglasses and bracelet)</option>
+      <option value="2">2(customized eyeglasses chain,waistbeads,bracelet and necklace)</option>
+      <option value="3">3(Bracelets,necklace,customizedeyeglasses and waistbeads)</option>
+      <option value="4">4(Necklace,bracelet,customizedeyeglasses and waistbeads)</option>
+   </select><br>
     <textarea id="customer-address" placeholder="Your Address" rows="3" required></textarea>
+   
+   
     <button onclick="sendOrder()">Send Order on WhatsApp</button>
   </div>
 
   <script>
-    const products = [
-      { name: 'Necklace', price: 3000 },
-      { name: 'Bracelet', price: 1500 },
-      { name: 'Waistbead', price: 1200 }
-    ];
-
     let selectedItems = [0, 1]; // Indices of picked goods (Necklace and Bracelet)
 
     const productList = document.getElementById('product-list');
