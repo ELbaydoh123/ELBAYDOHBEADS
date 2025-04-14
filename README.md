@@ -1,4 +1,5 @@
 # ELBAYDOHBEADS
+![alt text](image.png)
 ELbaydoh beads is a traditional accessories made up of a small glass beads.
 ### ABOUT US
 This is a fashion  home where we can recreate your waist with beautiful waistbeads.

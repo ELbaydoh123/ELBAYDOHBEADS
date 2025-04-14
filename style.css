@@ -137,6 +137,5 @@ a{
 @media (max-width:700px) {
     *{
         flex-direction: column;
-
     }
 }

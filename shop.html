@@ -104,16 +104,18 @@
 
       const encodedMessage = encodeURIComponent(message);
       const whatsappNumber = '9130686608'; // Replace with your actual WhatsApp number
-      const whatsappURL = `https://wa.me/${9130686608}?text=${encodedMessage}`;
+      const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
 
       try {
-        window.open(whatsappURL, '_https://wa.me/9130686608');
+        window.open(whatsappURL, '_blank');
       } catch (error) {
         alert("Failed to open WhatsApp. Please try again.");
-      }
-    }
+
+  }
+}
 
     // Initialize the product list display
     displayProducts();
   </script>
-  
+  </body>
+  </html>
