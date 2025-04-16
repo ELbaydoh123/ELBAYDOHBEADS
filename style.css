@@ -31,8 +31,9 @@ header img{
 .nave ul li a{
     color: #ab490a;
     text-decoration: none;
-    font-size: 30PX;
+    font-size: 20PX;
     text-align: right;
+    justify-content: space-between;
 }
 .main img{
     width: 100%;
@@ -45,7 +46,7 @@ nav ul{
     gap: 4rem;
     font-size: medium;
     align-items: right;
-    justify-content: center;
+    justify-content: space-between;
 }
 .shop{
     color:white ;
@@ -109,7 +110,6 @@ h4{
 .beads{
     color: #ab490a;
 }
-
 .container{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -120,16 +120,16 @@ h4{
     max-width: 660px;
 }
 .neck{
-    margin: 30PX;
-    padding: 20PX;
+    padding: 50PX auto;
     margin-top: 80px;
     color: #ab490a;
+    text-align: center;
 }
 p{
     text-align: center;
     justify-content: space-between;
     align-items: center;
-    font-size:18px;
+    font-size:19px;
     margin: 20px;
 }
 /*.gallery-container{
@@ -148,8 +148,8 @@ p{
 }
 .foot{
     background-color:  #ab490a;
-    padding: 8PX;
-    margin: 7px;
+    padding: 5PX;
+    margin: 4px;
     text-align: center;
 }
 .name{
@@ -180,5 +180,126 @@ a{
 @media (max-width:700px) {
     *{
         flex-direction: column;
+    }
+}
+/* General styles for the content container */
+.content-container {
+    background-color:  #e4d4bc; /* Light beige background color */
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Fine adornments paragraph */
+.fine-adornments {
+    font-size: 21px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #ab490a;
+    
+}
+
+/* Waist Beads paragraph */
+.waist-beads {
+    font-size: 17px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    color: #ab490a;
+    
+}
+
+/* Additional info paragraph */
+.additional-info {
+    font-size: 17px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #ab490a;
+    
+}
+
+/* Author name */
+.author {
+    font-style: italic;
+    font-size: 14px;
+    margin-bottom: 30px;
+    color: #ab490a;
+    
+}
+.header2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.collections {
+    font-size: 32px;
+    color: #b35900; /* Dark orange color */
+    text-transform: uppercase;
+    margin-top: 15px;
+    padding: 15px;
+}
+
+/* Gallery Container */
+.gallery-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Gallery Row */
+.gallery-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+/* Gallery Item */
+.gallery-item {
+    width: calc(50% - 10px); /* 50% width with spacing */
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+/* Overlay for text */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    color:white;
+    opacity: 1; /* Initially hidden */
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+
+.overlay h2 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .gallery-row {
+        flex-direction: column;
+    }
+    .gallery-item {
+        width: 100%;
+        margin-bottom: 20px;
     }
 }
