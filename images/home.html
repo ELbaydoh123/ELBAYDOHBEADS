@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Gallery</title>
+    <style>
+      /* General Styles */
+      body {
+          font-family: Arial, sans-serif;
+          background-color: #f5ebe0; /* Light beige background */
+          margin: 0;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+      }
+
+      .header {
+          background-color: brown;
+          display: flex;
+          align-items: center;
+          justify-content: space-between; /* Distribute items evenly */
+          padding: 1rem;
+          border-bottom: 1px solid #E3CCAD; /* Optional border for separation */
+      }
+
+      .header img {
+          width: 60px; /* Adjust size as needed */
+          height: 60px;
+          border-radius: 15px;
+          margin-left: 20px; /* Add spacing from the left */
+      }
+
+      .nav ul {
+          list-style-type: none;
+          display: flex;
+          gap: 2rem; /* Space between navigation links */
+          margin: 0;
+          padding: 0;
+      }
+
+      .nav ul li a {
+          color: #E3CCAD; /* Light beige text color */
+          text-decoration: none;
+          font-size: 16px;
+          font-weight: bold;
+      }
+
+      .nav ul li a:hover {
+          color: #f5ebe0; /* Slightly lighter color on hover */
+      }
+
+      .make {
+          padding: 5px;
+          color: #ab490a;
+          text-align: center;
+          font-size: 25px;
+      }
+
+      .eye {
+          color: #8b4513; /* Dark brown text color */
+          margin: 20px 0;
+          font-size: 30px;
+          text-align: center;
+      }
+
+      .gallery {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr); /* 4 columns */
+          gap: 20px; /* Space between items */
+          padding: 20px;
+          margin-bottom: 40px;
+      }
+
+      .item {
+          background-color: #a0522d; /* Dark orange background */
+          border-radius: 5px;
+          text-align: center;
+          color: white;
+          padding: 15px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease;
+      }
+
+      .item:hover {
+          transform: scale(1.05); /* Slight zoom effect on hover */
+      }
+
+      .gallery .item img {
+          width: 250px;
+          height: 300px;
+          border-radius: 8px;
+          margin-bottom: 10px;
+      }
+
+      .item h3 {
+          font-size: 16px;
+          margin: 0;
+      }
+
+      .item p {
+          font-size: 14px;
+          margin: 5px 0;
+      }
+
+      .item button {
+          background-color: #f5ebe0; /* Light beige button */
+          color: #a0522d; /* Dark orange text */
+          border: none;
+          padding: 10px 20px;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+      }
+
+      .item button:hover {
+          background-color: #c77c50; /* Slightly darker orange on hover */
+      }
+    </style>
+</head>
+<body>
+  <header class="header">
+    <!-- Logo on the left -->
+    <img src="images/logo.jpg" alt="logo">
+    
+    <!-- Navigation on the right -->
+    <nav class="nav">
+      <ul>
+        <li><a href="gallery.html">SHOP NOW</a></li>
+        <li><a href="gallery.html">CATALOG</a></li>
+        <li><a href="indexbk.html">HOME</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="make"><h1>WHAT WE MAKE</h1></div>
+  <h2 class="eye">CUSTOMIZED EYE GLASSES</h2>
+  <div class="gallery">
+    <!-- Gallery items here (unchanged) -->
+  </div>
+
+  <h2 class="eye">NECKLACE</h2>
+  <div class="gallery">
+    <!-- Gallery items here (unchanged) -->
+  </div>
+
+  <h2 class="eye">WAISTBEADS</h2>
+  <div class="gallery">
+    <!-- Gallery items here (unchanged) -->
+  </div>
+
+  <h2 class="eye">BRACELETS</h2>
+  <div class="gallery">
+    <!-- Gallery items here (unchanged) -->
+  </div>
+</body>
+</html>

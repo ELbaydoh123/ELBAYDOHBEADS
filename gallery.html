@@ -1,44 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <style>
-   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Gallery</title>
+    <style>
+      /* General Styles */
+body {
+    background-color:#E3CCAD;
+  }  
+.header{
+ background-color: brown;
+ border: 500px;
+ align-items: center;
+ display: flex;
+ justify-content: space-between;
+ margin: 0%;
+ padding: 1rem;
+ border: 1px solid;
+}
+img{
+    width: 5rem;
+    height: 5rem;
+}
+header img{
+    border-radius: 15px;
+    height: 60px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.nave ul li a{
+    color: #ab490a;
+    text-decoration: none;
+    font-size: 20PX;
+    text-align: right;
+    justify-content: space-between;
+}
+.main img{
+    width: 100%;
+    height: 100%;
+    color: #E3CCAD;
+}
+nav ul{
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+    font-size: medium;
+    align-items: right;
+    justify-content: space-between;
+}
+.shop{
+    color:white ;
+    text-decoration: none;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.right-content{
+    display: flex;
+    gap: 15px;
+}
+.eye {
+    color: #8b4513; /* Dark brown text color */
+    margin: 20px 0;
+    font-size: 30px;
+    text-align: center;
+}
 
- </style>
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 20px; /* Space between items */
+    padding: 2px;
+    margin-bottom: 40px;
+}
 
+.item {
+    background-color: #a0522d; /* Dark orange background */
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    padding: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.item:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.gallery .item img {
+    width: 250px;
+    height: 300px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.item h3 {
+    font-size: 16px;
+    margin: 0;
+}
+
+.item p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.item button {
+    background-color: #E3CCAD; /* Light beige button */
+    color: #a0522d; /* Dark orange text */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.item button:hover {
+    background-color: #c77c50; /* Slightly darker orange on hover */
+}
+.make{
+  padding: 5px;
+  color: #ab490a;
+  align-items: center;
+  text-align: center;
+  font-size: 25px;
+}
+    </style>
+    
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-       <li><a href="index.html">HOME</a></li> 
-      </ul>
-    </nav>
-  </header>
-  <h2 class="neck"> WHAT WE MAKE</h2>
- <!--roll one--> <div class=" gallery-container">
-  <div class="gallery-item">
-    <h2 >WAISTBEADS</h2>
-    <div class="gallery-container">
-      <!-- First Row -->
-          <div class="gallery-item">
-              <img src="./images/babypink.jpg" alt="babypink">
+  <header class="header">
+    <img src="images/logo.jpg"alt="logo">
+  <div class="right-content">
+      <nav class="nav">
+        <ul>
+            <li><a href="gallery.html" class="shop" style="color: #E3CCAD;">SHOP NOW </a></li>
+            <li><a href="gallery.html" class="shop" style="color: #E3CCAD;">CATALOG</a></li>
+            <li><a href="indexbk.html" class="shop" style="color: #E3CCAD;">HOME</a></li>
 
-              <img src="./images/blac" alt="blackcry">
-              
 
-          </div>
+        </ul>
+      </nav>
+  </div>
+ </header>
+  
+  <div class="make"><h1>WHAT WE MAKE</h1></div>
+    <h2 class="eye">CUSTOMIZED EYE GLASSES</h2>
+    <div class="gallery">
+        <div class="item">
+            <img src="./images/customizedeyeglasses.jpg" alt="customize eye glasses in pearl">
+            <h3>customize eye glasses in pearl</h3>
+            <p>#2500</p>
+            <button>Click to Shop</button>
+        </div>
+        <div class="item">
+            <img src="./images/eyeglasses.jpg" alt="eye glasses in blue colour">
+            <h3>eye glasses in blue colour</h3>
+            <p>#2000</p>
+            <button>Click to Shop</button>
+        </div>
+        <div class="item">
+            <img src="./images/eyeglass1.jpg" alt="eyeglass1 in pink colour">
+            <h3>eyeglass1 in pink colour</h3>
+            <p>#2000</p>
+            <button>Click to Shop</button>
+        </div>
+        <div class="item">
+            <img src="./images/eyeglass2.jpg" alt="eyeglass2 in red colour">
+            <h3>eyeglass2 in red colour</h3>
+            <p>#2000</p>
+            <button>Click to Shop</button>
+        </div>
+    </div>
 
-      <!-- Second Row -->
-          <div class="gallery-ite">
-              <img src="images/colorful-beads-blue-case-placemat-pink-.avif" alt="Anklets">
-              
-              <img src="./images/multicolored beads.avif" alt="multicolored">
-            </div>
-</div>
-      <!-- </div> -->
+    <h2 class="eye">NECKLACE</h2>
+    <div class="gallery">
+        <div class="item">
+            <img src="./images/setofnecklace.jpg" alt="setofnecklace">
+            <h3>set of necklace in white pearl</h3>
+            <p>#6000</p>
+            <button>Click to Shop</button>
+        </div>
+        <div class="item">
+            <img src="./images/singleneclace.jpg" alt="single butterfly necklace">
+            <h3>single butterfly necklace</h3>
+            <p>#4000</p>
+            <button>Click to Shop</button>
+        </div>
+        <div class="item">
+            <img src="./images/necklace.jpg" alt="necklace in gold extension">
+            <h3>necklace in gold extension</h3>
+            <p>#4000</p>
+            <button>Click to Shop</button>
+        </div>
+        <div class="item">
+            <img src="./images/neklace3.jpg" alt="necklace in 2 layers">
+            <h3>necklace in 2 layers</h3>
+            <p>#6000</p>
+            <button>Click to Shop</button>
+        </div>
+    </div>
+    <h2 class="eye">WAISTBEADS</h2>
+    <div class="gallery">
+        <div class="item">
+            <img src="./images/crystalblack.jpg" alt="crystalblack">
+            <h3>crystal waistbeads in black and gold</h3>
+            <p>#1500 each</p>
+            <button>Click to Shop</button>
+        </div>
+        <div class="item">
+            <img src="./images/crystalsilver.jpg" alt="crystalsilver">
+            <h3>crystal in silver </h3>
+            <p>#1500</p>
+            <button>Click to Shop</button>
+        </div>
+        <div class="item">
+            <img src="./images/babypink.jpg" alt="babypink">
+            <h3>waistbeads in baby pink and butterfly charm</h3>
+            <p>#2000 each</p>
+            <button>Click to Shop</button>
+        </div>
+        <div class="item">
+            <img src="./images/crystalgold.jpg" alt="crystalgold">
+            <h3>crystal waistbeads in gold</h3>
+            <p>#1500</p>
+            <button>Click to Shop</button>
+        </div>
+    </div>
+    <h2 class="eye">BRACELETS</h2>
+    <div class="gallery">
+        <div class="item">
+            <img src="./images/braceletextention.jpg" alt="braceletextention">
+            <h3>bracelet extension in pearl desing</h3>
+            <p>#6000</p>
+            <button>Click to Shop</button>
+        </div>
+        <div class="item">
+            <img src="./images/braceletset.jpg" alt="braceletset">
+            <h3>bracelet in different desing</h3>
+            <p>#2000 each</p>
+            <button>Click to Shop</button>
+        </div>
+        <div class="item">
+            <img src="images/braceletcrystal.jpg" alt="braceletcrystal">
+            <h3>bracelet in crystal</h3>
+            <p>#3000 each</p>
+            <button>Click to Shop</button>
+        </div>
+        <div class="item">
+            <img src="./images/designbracelet.jpg" alt="designbracelet">
+            <h3>bracelet in different desing</h3>
+            <p>#5000</p>
+            <button>Click to Shop</button>
+        </div>
+    </div>
 </body>
 </html>
