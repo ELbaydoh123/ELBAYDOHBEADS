@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Gallery</title>
+    <style>
+        /* General Styles */
+        body {
+            background-color: #E3CCAD;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .fixed-container {
+            position: sticky;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .header {
+            background-color: brown;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            border-bottom: 1px solid #ab490a;
+        }
+
+        .header img {
+            border-radius: 15px;
+            height: 60px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            gap: 1rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li a {
+            color: #E3CCAD;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .make {
+            padding: 20px;
+            color: #ab490a;
+            text-align: center;
+            font-size: 25px;
+        }
+
+        .eye {
+            color: #8b4513;
+            margin: 20px 0;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .item {
+            background-color: #a0522d;
+            border-radius: 5px;
+            text-align: center;
+            color: white;
+            padding: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .item:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery .item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .item h3 {
+            font-size: 16px;
+            margin: 0;
+        }
+
+        .item p {
+            font-size: 14px;
+            margin: 5px 0;
+        }
+
+        .item button {
+            background-color: #E3CCAD;
+            color: #a0522d;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .item button:hover {
+            background-color: #c77c50;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .gallery {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 992px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .make {
+                font-size: 20px;
+            }
+
+            .eye {
+                font-size: 20px;
+            }
+
+            nav ul li a {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header img {
+                height: 40px;
+            }
+
+            .make {
+                font-size: 18px;
+            }
+
+            .eye {
+                font-size: 18px;
+            }
+
+            .item h3 {
+                font-size: 14px;
+            }
+
+            .item p {
+                font-size: 12px;
+            }
+
+            .item button {
+                font-size: 12px;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="fixed-container">
+        <header class="header">
+            <img src="images/logo.jpg" alt="logo">
+            <nav>
+                <ul>
+                    <li><a href="gallery.html" style="color: #E3CCAD;">SHOP NOW</a></li>
+                    <li><a href="gallery.html" style="color: #E3CCAD;">CATALOG</a></li>
+                    <li><a href="indexbk.html" style="color: #E3CCAD;">HOME</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <div class="make"><h1>WHAT WE MAKE</h1></div>
+    <h2 class="eye">CUSTOMIZED EYE GLASSES</h2>
+    <div class="gallery">
+        <div class="item">
+            <img src="./images/customizedeyeglasses.jpg" alt="customize eye glasses in pearl">
+            <h3>customize eye glasses in pearl</h3>
+            <p>#2500</p>
+            <button>Click to Shop</button>
+        </div>
+        <div class="item">
+            <img src="./images/eyeglasses.jpg" alt="eye glasses in blue colour">
+            <h3>eye glasses in blue colour</h3>
+            <p>#2000</p>
+            <button>Click to Shop</button>
+        </div>
+        <div class="item">
+            <img src="./images/eyeglass1.jpg" alt="eyeglass1 in pink colour">
+            <h3>eyeglass1 in pink colour</h3>
+            <p>#2000</p>
+            <button>Click to Shop</button>
+        </div>
+        <div class="item">
+            <img src="./images/eyeglass2.jpg" alt="eyeglass2 in red colour">
+            <h3>eyeglass2 in red colour</h3>
+            <p>#2000</p>
+            <button>Click to Shop</button>
+        </div>
+    </div>
+
+    <h2 class="eye">NECKLACE</h2>
+    <div class="gallery">
+        <div class="item">
+            <img src="./images/setofnecklace.jpg" alt="setofnecklace">
+            <h3>set of necklace in white pearl</h3>
+            <p>#6000</p>
+            <button>Click to Shop</button>
+        </div>
+        <div class="item">
+            <img src="./images/singleneclace.jpg" alt="single butterfly necklace">
+            <h3>single butterfly necklace</h3>
+            <p>#4000</p>
+            <button>Click to Shop</button>
+        </div>
+        <div class="item">
+            <img src="./images/necklace.jpg" alt="necklace in gold
