@@ -126,6 +126,13 @@ nav ul{
 .item button:hover {
     background-color: #c77c50; /* Slightly darker orange on hover */
 }
+
+.foot{
+    background-color: #ab490a;
+    padding: 5PX;
+    margin: 4px;
+    text-align: center;
+}
 .make{
   padding: 5px;
   color: #ab490a;
@@ -133,6 +140,73 @@ nav ul{
   text-align: center;
   font-size: 25px;
 }
+/* Responsive Design */
+@media (max-width: 1200px) {
+            .gallery {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 992px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .make {
+                font-size: 20px;
+            }
+
+            .eye {
+                font-size: 20px;
+            }
+
+            nav ul li a {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header img {
+                height: 40px;
+            }
+
+            .make {
+                font-size: 18px;
+            }
+
+            .eye {
+                font-size: 18px;
+            }
+
+            .item h3 {
+                font-size: 14px;
+            }
+
+            .item p {
+                font-size: 12px;
+            }
+
+            .item button {
+                font-size: 12px;
+                padding: 8px 16px;
+            }
+        }
     </style>
     
 </head>
@@ -265,5 +339,8 @@ nav ul{
             <button>Click to Shop</button>
         </div>
     </div>
+    <footer class="foot">
+        <p>&copy;ELbaydohbeads.A waist with a waistbeads looks like a gem</p>
+      </footer>
 </body>
 </html>
