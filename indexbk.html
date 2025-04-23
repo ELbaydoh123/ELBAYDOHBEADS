@@ -13,6 +13,13 @@
 body{
     background-color:   #e4d4bc;
 }
+.fixed-container{
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index:1000;
+}
 .header{
  background-color: brown;
  border: 500px;
@@ -266,21 +273,25 @@ a{
     </style>
 </head>
 <body>
-  <header class="header">
-    <div></div>
-    <img src="images/logo.jpg"alt="logo">
-  <div class="right-content">
-      <nav class="nav">
-        <ul>
-            <li><a href="gallery.html" class="shop" style="color: #E3CCAD;">SHOP NOW </a></li>
-            <li><a href="gallery.html" class="shop" style="color: #E3CCAD;">CATALOG</a></li>
-            <li><a href="indexbk.html" class="shop" style="color: #E3CCAD;">HOME</a></li>
+    <div class="fixed-container">
+        <header class="header">
+            <div></div>
+            <img src="images/logo.jpg"alt="logo">
+          <div class="right-content">
+              <nav class="nav">
+                <ul>
+                    <li><a href="gallery.html" class="shop" style="color: #E3CCAD;">SHOP NOW </a></li>
+                    <li><a href="gallery.html" class="shop" style="color: #E3CCAD;">CATALOG</a></li>
+                    <li><a href="indexbk.html" class="shop" style="color: #E3CCAD;">HOME</a></li>
+        
+        
+                </ul>
+              </nav>
+          </div>
+         </header>
 
-
-        </ul>
-      </nav>
-  </div>
- </header>
+    </div>
+  
   <main class="main">
     <img src="images/background.jpg" alt="background">
   </main>

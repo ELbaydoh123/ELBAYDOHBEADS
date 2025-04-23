@@ -8,7 +8,14 @@
       /* General Styles */
 body {
     background-color:#E3CCAD;
-  }  
+  }
+.fixed-container{
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index:1000;
+}  
 .header{
  background-color: brown;
  border: 500px;
@@ -130,21 +137,24 @@ nav ul{
     
 </head>
 <body>
-  <header class="header">
-    <img src="images/logo.jpg"alt="logo">
-  <div class="right-content">
-      <nav class="nav">
-        <ul>
-            <li><a href="gallery.html" class="shop" style="color: #E3CCAD;">SHOP NOW </a></li>
-            <li><a href="gallery.html" class="shop" style="color: #E3CCAD;">CATALOG</a></li>
-            <li><a href="indexbk.html" class="shop" style="color: #E3CCAD;">HOME</a></li>
+    <div class="fixed-container">
+        <header class="header">
+            <img src="images/logo.jpg"alt="logo">
+          <div class="right-content">
+              <nav class="nav">
+                <ul>
+                    <li><a href="gallery.html" class="shop" style="color: #E3CCAD;">SHOP NOW </a></li>
+                    <li><a href="gallery.html" class="shop" style="color: #E3CCAD;">CATALOG</a></li>
+                    <li><a href="indexbk.html" class="shop" style="color: #E3CCAD;">HOME</a></li>
+        
+        
+                </ul>
+              </nav>
+          </div>
+         </header>
 
+    </div>
 
-        </ul>
-      </nav>
-  </div>
- </header>
-  
   <div class="make"><h1>WHAT WE MAKE</h1></div>
     <h2 class="eye">CUSTOMIZED EYE GLASSES</h2>
     <div class="gallery">
